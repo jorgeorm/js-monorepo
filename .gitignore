@@ -3,3 +3,24 @@ node_modules/
 
 .nx/cache
 .nx/workspace-data
+
+# Expo
+.expo/
+.yarn/
+dist/
+npm-debug.*
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+*.orig.*
+web-build/
+cache/
+
+
+.angular
+
+# Next.js
+.next
+out

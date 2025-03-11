@@ -4,9 +4,23 @@
   "workspaces": [
     "packages/*"
   ],
-  "dependencies": {},
   "devDependencies": {
+    "@angular-devkit/core": "~19.2.0",
+    "@expo/cli": "~0.21.8",
+    "@nx/angular": "^20.5.0",
+    "@nx/expo": "^20.5.0",
+    "@nx/next": "^20.5.0",
+    "@nx/nuxt": "^20.5.0",
+    "@nx/vite": "20.5.0",
     "lerna": "^8.2.1",
+    "nuxt": "^3.10.0",
     "nx": "20.5.0"
+  },
+  "dependencies": {
+    "expo": "~52.0.11",
+    "next": "~15.1.4",
+    "react": "~18.3.1",
+    "react-dom": "~18.3.1",
+    "react-native": "0.76.3"
   }
 }
