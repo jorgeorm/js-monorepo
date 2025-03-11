@@ -27,3 +27,9 @@ out
 
 vite.config.*.timestamp*
 vitest.config.*.timestamp*
+# Nuxt dev/build outputs
+.output
+.data
+.nuxt
+.nitro
+.cache
