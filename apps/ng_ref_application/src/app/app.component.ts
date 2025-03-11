@@ -10,5 +10,5 @@ import { NxWelcomeComponent } from './nx-welcome.component';
   encapsulation: ViewEncapsulation.ShadowDom,
 })
 export class AppComponent {
-  title = 'Angular Reference Application';
+  title = 'NgReferenceApplication';
 }

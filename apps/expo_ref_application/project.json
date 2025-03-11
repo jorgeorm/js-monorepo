@@ -1,9 +1,9 @@
 {
-  "name": "Expo Reference Application",
+  "name": "ExpoReferenceApplication",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "apps/expo_ref_application/src",
   "projectType": "application",
   "tags": ["ui", "demo:ref_app", "hybrid"],
-  "// targets": "to see all targets run: nx show project Expo Reference Application --web",
+  "// targets": "to see all targets run: nx show project ExpoReferenceApplication --web",
   "targets": {}
 }

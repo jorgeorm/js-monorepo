@@ -1,3 +1,3 @@
 <template>
-  <NxWelcome title="Nuxt Reference Application" />
+  <NxWelcome title="NuxtReferenceApplication" />
 </template>

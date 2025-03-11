@@ -15,13 +15,13 @@ describe('AppComponent', () => {
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
     expect(compiled.querySelector('h1')?.textContent).toContain(
-      'Welcome Angular Reference Application'
+      'Welcome NgReferenceApplication'
     );
   });
 
-  it(`should have as title 'Angular Reference Application'`, () => {
+  it(`should have as title 'NgReferenceApplication'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('Angular Reference Application');
+    expect(app.title).toEqual('NgReferenceApplication');
   });
 });
