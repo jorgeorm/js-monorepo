@@ -1,0 +1,9 @@
+{
+  "name": "NextJs Reference Application",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/next_ref_application",
+  "projectType": "application",
+  "tags": ["ui", "demo:ref_app"],
+  "// targets": "to see all targets run: nx show project NextJs Reference Application --web",
+  "targets": {}
+}
