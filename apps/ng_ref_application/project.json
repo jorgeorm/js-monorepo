@@ -1,0 +1,97 @@
+{
+  "name": "NgReferenceApplication",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "prefix": "ng-ref-app",
+  "sourceRoot": "apps/ng_ref_application/src",
+  "tags": ["ui", "demo:ref_app"],
+  "targets": {
+    "build": {
+      "executor": "@angular-devkit/build-angular:application",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/apps/ng_ref_application",
+        "index": "apps/ng_ref_application/src/index.html",
+        "browser": "apps/ng_ref_application/src/main.ts",
+        "polyfills": ["zone.js"],
+        "tsConfig": "apps/ng_ref_application/tsconfig.app.json",
+        "inlineStyleLanguage": "sass",
+        "assets": [
+          {
+            "glob": "**/*",
+            "input": "apps/ng_ref_application/public"
+          }
+        ],
+        "styles": ["apps/ng_ref_application/src/styles.sass"],
+        "scripts": [],
+        "server": "apps/ng_ref_application/src/main.server.ts",
+        "ssr": {
+          "entry": "apps/ng_ref_application/src/server.ts"
+        },
+        "prerender": true
+      },
+      "configurations": {
+        "production": {
+          "budgets": [
+            {
+              "type": "initial",
+              "maximumWarning": "500kb",
+              "maximumError": "1mb"
+            },
+            {
+              "type": "anyComponentStyle",
+              "maximumWarning": "4kb",
+              "maximumError": "8kb"
+            }
+          ],
+          "outputHashing": "all"
+        },
+        "development": {
+          "optimization": false,
+          "extractLicenses": false,
+          "sourceMap": true
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "serve": {
+      "executor": "@angular-devkit/build-angular:dev-server",
+      "configurations": {
+        "production": {
+          "buildTarget": "NgReferenceApplication:build:production"
+        },
+        "development": {
+          "buildTarget": "NgReferenceApplication:build:development"
+        }
+      },
+      "defaultConfiguration": "development",
+      "options": {
+        "proxyConfig": "apps/ng_ref_application/proxy.conf.json"
+      }
+    },
+    "extract-i18n": {
+      "executor": "@angular-devkit/build-angular:extract-i18n",
+      "options": {
+        "buildTarget": "NgReferenceApplication:build"
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint"
+    },
+    "test": {
+      "executor": "@nx/vite:test",
+      "outputs": ["{options.reportsDirectory}"],
+      "options": {
+        "reportsDirectory": "../../coverage/apps/ng_ref_application"
+      }
+    },
+    "serve-static": {
+      "executor": "@nx/web:file-server",
+      "options": {
+        "buildTarget": "NgReferenceApplication:build",
+        "staticFilePath": "dist/apps/ng_ref_application/browser",
+        "spa": true
+      }
+    }
+  }
+}
