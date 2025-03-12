@@ -83,6 +83,11 @@
     "@nx/vite:test": {
       "cache": true,
       "inputs": ["default", "^default"]
+    },
+    "@nx/angular:package": {
+      "cache": true,
+      "dependsOn": ["^build"],
+      "inputs": ["default", "^default"]
     }
   },
   "generators": {
@@ -102,6 +107,10 @@
       "library": {
         "unitTestRunner": "vitest"
       }
+    },
+    "@nx/angular:library": {
+      "linter": "eslint",
+      "unitTestRunner": "jest"
     }
   },
   "release": {

@@ -15,6 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@jomdev/ng-base-lib": ["packages/ng-base-lib/src/index.ts"],
       "@jomdev/react-base-lib": ["packages/react-base-lib/src/index.ts"]
     }
   },
