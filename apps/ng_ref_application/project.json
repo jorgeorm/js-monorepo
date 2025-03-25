@@ -4,7 +4,7 @@
   "projectType": "application",
   "prefix": "ng-ref-app",
   "sourceRoot": "apps/ng_ref_application/src",
-  "tags": ["ui", "demo:ref_app"],
+  "tags": ["ui", "angular", "reference applicaiton"],
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:application",
@@ -15,14 +15,14 @@
         "browser": "apps/ng_ref_application/src/main.ts",
         "polyfills": ["zone.js"],
         "tsConfig": "apps/ng_ref_application/tsconfig.app.json",
-        "inlineStyleLanguage": "sass",
+        "inlineStyleLanguage": "scss",
         "assets": [
           {
             "glob": "**/*",
             "input": "apps/ng_ref_application/public"
           }
         ],
-        "styles": ["apps/ng_ref_application/src/styles.sass"],
+        "styles": ["apps/ng_ref_application/src/styles.scss"],
         "scripts": [],
         "server": "apps/ng_ref_application/src/main.server.ts",
         "ssr": {
@@ -77,13 +77,6 @@
     },
     "lint": {
       "executor": "@nx/eslint:lint"
-    },
-    "test": {
-      "executor": "@nx/vite:test",
-      "outputs": ["{options.reportsDirectory}"],
-      "options": {
-        "reportsDirectory": "../../coverage/apps/ng_ref_application"
-      }
     },
     "serve-static": {
       "executor": "@nx/web:file-server",

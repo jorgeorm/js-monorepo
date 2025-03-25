@@ -6,7 +6,7 @@ import { NxWelcomeComponent } from './nx-welcome.component';
   imports: [NxWelcomeComponent, RouterModule],
   selector: 'ng-ref-app-root',
   templateUrl: './app.component.html',
-  styleUrl: './app.component.sass',
+  styleUrl: './app.component.scss',
   encapsulation: ViewEncapsulation.ShadowDom,
 })
 export class AppComponent {
