@@ -1,0 +1,68 @@
+{
+  "name": "RestifyReferenceApplication",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/restify_ref_application/src",
+  "projectType": "application",
+  "tags": ["service", "restify", "backend"],
+  "targets": {
+    "build": {
+      "executor": "@nx/esbuild:esbuild",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
+      "options": {
+        "platform": "node",
+        "outputPath": "dist/apps/restify_ref_application",
+        "format": ["cjs"],
+        "bundle": false,
+        "main": "apps/restify_ref_application/src/main.ts",
+        "tsConfig": "apps/restify_ref_application/tsconfig.app.json",
+        "assets": ["apps/restify_ref_application/src/assets"],
+        "generatePackageJson": true,
+        "esbuildOptions": {
+          "sourcemap": true,
+          "outExtension": {
+            ".js": ".js"
+          }
+        }
+      },
+      "configurations": {
+        "development": {},
+        "production": {
+          "generateLockfile": true,
+          "esbuildOptions": {
+            "sourcemap": false,
+            "outExtension": {
+              ".js": ".js"
+            }
+          }
+        }
+      }
+    },
+    "serve": {
+      "executor": "@nx/js:node",
+      "defaultConfiguration": "development",
+      "dependsOn": ["build"],
+      "options": {
+        "buildTarget": "RestifyReferenceApplication:build",
+        "runBuildTargetDependencies": false
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "RestifyReferenceApplication:build:development"
+        },
+        "production": {
+          "buildTarget": "RestifyReferenceApplication:build:production"
+        }
+      }
+    },
+    "test": {
+      "options": {
+        "passWithNoTests": true
+      }
+    },
+    "docker-build": {
+      "dependsOn": ["build"],
+      "command": "docker build -f apps/restify_ref_application/Dockerfile . -t RestifyReferenceApplication"
+    }
+  }
+}
