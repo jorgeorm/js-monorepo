@@ -15,9 +15,18 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@jomdev/ng-base-lib": ["packages/ng-base-lib/src/index.ts"],
-      "@jomdev/react-base-lib": ["packages/react-base-lib/src/index.ts"],
-      "@jomdev/styles-base-lib": ["packages/styles-base-lib/src/index.ts"]
+      "@jom/base-rapid-api-client": [
+        "packages/base/rapid-api-client/src/index.ts"
+      ],
+      "@jom/ng-base-components": [
+        "packages/base/ng-base-components/src/index.ts"
+      ],
+      "@jom/react-base-components": [
+        "packages/base/react-base-components/src/index.ts"
+      ],
+      "@jom/styles-base-library": [
+        "packages/base/styles-base-library/src/index.ts"
+      ]
     }
   },
   "exclude": ["node_modules", "tmp"]
