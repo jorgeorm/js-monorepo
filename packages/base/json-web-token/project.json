@@ -1,0 +1,21 @@
+{
+  "name": "BaseJsonWebToken",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/base/json-web-token/src",
+  "projectType": "library",
+  "tags": ["JWT"],
+  "targets": {
+    "build": {
+      "executor": "@nx/esbuild:esbuild",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/packages/base/json-web-token",
+        "main": "packages/base/json-web-token/src/index.ts",
+        "tsConfig": "packages/base/json-web-token/tsconfig.lib.json",
+        "assets": ["packages/base/json-web-token/*.md"],
+        "format": ["cjs"],
+        "generatePackageJson": true
+      }
+    }
+  }
+}
