@@ -1,0 +1,156 @@
+{
+  "consumer": {
+    "name": "MovieRatingsConsumer"
+  },
+  "interactions": [
+    {
+      "description": "a request for ratings of the movie",
+      "pending": false,
+      "providerStates": [
+        {
+          "name": "I have a movie"
+        }
+      ],
+      "request": {
+        "headers": {
+          "x-rapidapi-host": [
+            "movies-ratings2.p.rapidapi.com"
+          ],
+          "x-rapidapi-key": [
+            "dc05e2d2b2msh6f3ff03a09804aep153707jsn5307eafc5340"
+          ]
+        },
+        "method": "GET",
+        "path": "/ratings",
+        "query": {
+          "id": [
+            "tt0111161"
+          ]
+        }
+      },
+      "response": {
+        "body": {
+          "content": {
+            "imdbId": "tt0111161",
+            "lastUpdated": 1722897052603,
+            "media": {
+              "backdrop_path": "/avedvodAZUcwqevBfm8p4G2NziQ.jpg",
+              "budget": 25000000,
+              "director": "Frank Darabont",
+              "external_ids": {
+                "facebook_id": null,
+                "imdb_id": "tt0111161",
+                "instagram_id": null,
+                "twitter_id": null,
+                "wikidata_id": "Q172241"
+              },
+              "genres": [
+                {
+                  "id": 18,
+                  "name": "Drama"
+                },
+                {
+                  "id": 80,
+                  "name": "Crime"
+                }
+              ],
+              "homepage": "",
+              "id": 278,
+              "imdb_id": "tt0111161",
+              "media_type": "movie",
+              "origin_country": [
+                "US"
+              ],
+              "original_language": "en",
+              "original_title": "The Shawshank Redemption",
+              "overview": "Imprisoned in the 1940s for the double murder of his wife and her lover, upstanding banker Andy Dufresne begins a new life at the Shawshank prison, where he puts his accounting skills to work for an amoral warden. During his long stretch in prison, Dufresne comes to be admired by the other inmates -- including an older prisoner named Red -- for his integrity and unquenchable sense of hope.",
+              "popularity": 227.544,
+              "poster_path": "/9cqNxx0GxF0bflZmeSMuL5tnGzr.jpg",
+              "release_date": "1994-09-23",
+              "revenue": 28341469,
+              "runtime": 142,
+              "spoken_languages": [
+                {
+                  "english_name": "English",
+                  "iso_639_1": "en",
+                  "name": "English"
+                }
+              ],
+              "status": "Released",
+              "tagline": "Fear can hold you prisoner. Hope can set you free.",
+              "title": "The Shawshank Redemption",
+              "video": false
+            },
+            "ratings": {
+              "average": {
+                "score": 9.1
+              },
+              "imdb": {
+                "reviewsCount": 29000000,
+                "score": 9.3,
+                "url": "https://www.imdb.com/title/tt0111161/"
+              },
+              "letterboxd": {
+                "score": 4.6,
+                "url": "https://letterboxd.com/film/the-shawshank-redemption"
+              },
+              "metacritic": {
+                "averageScore": 8.6,
+                "metascore": 82,
+                "url": "https://www.metacritic.com/movie/the-shawshank-redemption/",
+                "userScore": 8.9
+              },
+              "rotten_tomatoes": {
+                "audienceScore": 98,
+                "audienceScoreReviewsCount": 250000,
+                "averageScore": 9.4,
+                "tomatometer": 89,
+                "tomatometerReviewsCount": 141,
+                "url": "https://www.rottentomatoes.com/m/shawshank_redemption"
+              }
+            },
+            "tmdbId": 278
+          },
+          "contentType": "application/json",
+          "encoded": false
+        },
+        "headers": {
+          "Content-Type": [
+            "application/json"
+          ]
+        },
+        "matchingRules": {
+          "body": {
+            "$": {
+              "combine": "AND",
+              "matchers": [
+                {
+                  "match": "type"
+                }
+              ]
+            }
+          },
+          "header": {},
+          "status": {}
+        },
+        "status": 200
+      },
+      "type": "Synchronous/HTTP"
+    }
+  ],
+  "metadata": {
+    "pact-js": {
+      "version": "15.0.1"
+    },
+    "pactRust": {
+      "ffi": "0.4.22",
+      "models": "1.2.3"
+    },
+    "pactSpecification": {
+      "version": "4.0"
+    }
+  },
+  "provider": {
+    "name": "MovieRatingsAPI"
+  }
+}
