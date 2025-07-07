@@ -1,0 +1,20 @@
+{
+  "name": "@jom/base-json-web-token-example",
+  "version": "1.0.0",
+  "description": "",
+  "bin": {
+    "jwt-example": "index.js"
+  },
+  "scripts": {
+    "build": "npm run clear && npm run esbuild && npm run cp:pkg.json",
+    "build:dev": "npm run clear && npm run esbuild -- --watch --sourcemap=inline",
+    "esbuild": "esbuild src/index.ts --bundle --platform=node --target=node22 --outfile=dist/index.js",
+    "cp:pkg.json": "shx cp package.json dist/package.json",
+    "clear": "shx rm -rf dist",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Jorge Ordonez Mendez",
+  "license": "ISC",
+  "type": "commonjs"
+}
