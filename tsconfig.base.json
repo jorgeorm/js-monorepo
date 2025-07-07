@@ -15,8 +15,12 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@jom/base-json-web-token": ["packages/base/json-web-token/src/index.ts"],
       "@jom/base-rapid-api-client": [
         "packages/base/rapid-api-client/src/index.ts"
+      ],
+      "@jom/chassis-movie-services": [
+        "packages/chassis/movie-services/src/index.ts"
       ],
       "@jom/ng-base-components": [
         "packages/base/ng-base-components/src/index.ts"
